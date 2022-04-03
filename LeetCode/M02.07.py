@@ -27,3 +27,6 @@ class Solution:
         #     else:
         #         q=q.next
         # return p
+
+        
+# 先比较headA与headB的长度，设置坐标a和b ，遍历一遍headA和headB，得到lenA和lenB，若lenA>lenB，则让a往后跳（lenA-lenB）步，反之让b往后跳（lenB-lenA）步。再开始同步向后跳，直到a=b，退出并返回。
