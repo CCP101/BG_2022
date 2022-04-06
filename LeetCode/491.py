@@ -20,3 +20,6 @@ class Solution:
             self.path.append(nums[i])
             self.backtracking(nums, i+1)
             self.path.pop() 
+
+soul = Solution()
+print(soul.findSubsequences([-10,-20,5,8,9,100]))
