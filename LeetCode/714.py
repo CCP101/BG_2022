@@ -11,3 +11,4 @@ class Solution:
                 result += prices[i] - minPrice - fee
                 minPrice = prices[i] - fee
         return result
+        
