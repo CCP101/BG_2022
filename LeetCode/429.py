@@ -1,18 +1,12 @@
-"""
-# Definition for a Node.
 class Node:
     def __init__(self, val=None, children=None):
         self.val = val
         self.children = children
-"""
 
-class Node:
-    def __init__(self, val=None, children=None):
-        self.val = val
-        self.children = children
 
 class Solution:
-    def levelOrder(self,root):
+    @staticmethod
+    def levelOrder(root):
         if not root:
             return []
         res = []

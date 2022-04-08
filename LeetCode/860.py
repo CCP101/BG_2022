@@ -1,5 +1,6 @@
 class Solution:
-    def lemonadeChange(self, bills) -> bool:
+    @staticmethod
+    def lemonadeChange(bills) -> bool:
         Mdict = {}
         Mdict[5], Mdict[10], Mdict[20] = 0, 0, 0
         for bill in bills:
@@ -21,5 +22,6 @@ class Solution:
                     return False
         return True
 
+
 soul = Solution()
-print(soul.lemonadeChange([5,5,10,10,20]))
+print(soul.lemonadeChange([5, 5, 10, 10, 20]))

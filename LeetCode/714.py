@@ -1,5 +1,6 @@
 class Solution:
-    def maxProfit(self, prices, fee) -> int:
+    @staticmethod
+    def maxProfit(prices, fee) -> int:
         result = 0
         minPrice = prices[0]
         for i in range(1, len(prices)):

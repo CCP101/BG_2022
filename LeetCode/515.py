@@ -4,8 +4,11 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
-    def largestValues(self, root):
+    @staticmethod
+    def largestValues(root):
         if not root:
             return []
         res = []

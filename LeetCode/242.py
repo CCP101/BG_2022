@@ -1,8 +1,6 @@
-from numpy import record
-
-
 class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
+    @staticmethod
+    def isAnagram(s: str, t: str) -> bool:
         record = [0]*26
         for i in range(len(s)):
             record[ord(s[i])-ord('a')] += 1
@@ -11,5 +9,5 @@ class Solution:
         for i in range(26):
             if record[i] != 0:
                 return False
-                break
+            break
         return True

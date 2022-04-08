@@ -10,20 +10,17 @@ class MyLinkedList:
         self._head = ListNode(0)
         self._count = 0
 
-
     def get(self, index: int) -> int:
-        if 0<= index < self._count:
+        if 0 <= index < self._count:
             node = self._head
-            for _ in range(index+1):
+            for _ in range(index + 1):
                 node = node.next
             return node.val
         else:
             return -1
 
-
     def addAtHead(self, val: int) -> None:
         self.addAtIndex(0, val)
-
 
     def addAtTail(self, val: int) -> None:
         self.addAtIndex(self._count, val)
@@ -54,11 +51,10 @@ class MyLinkedList:
                 prev_node.next, current_node.next = current_node.next, None
 
 
-
 # Your MyLinkedList object will be instantiated and called as such:
 obj = MyLinkedList()
-print(param_1 = obj.get(0))
-print(obj.addAtHead(1,2))
+print(param_1=obj.get(0))
+print(obj.addAtHead(1, 2))
 print(obj.addAtTail(1))
 print(obj.addAtIndex(1))
 print(obj.deleteAtIndex(1))

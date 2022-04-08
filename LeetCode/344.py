@@ -1,5 +1,6 @@
 class Solution:
-    def reverseString(self, s) -> None:
+    @staticmethod
+    def reverseString(s) -> None:
         """
         Do not return anything, modify s in-place instead.
         """

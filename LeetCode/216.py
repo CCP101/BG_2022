@@ -15,8 +15,8 @@ class Solution:
             if self.sum_now == n:
                 self.res.append(self.path[:])
             return
-        for i in range(start_num, 10):
         # for i in range(start_num, 10 - (k - len(self.path)) + 1):
+        for i in range(start_num, 10):
             self.path.append(i)
             self.sum_now += i
             self.backtracking(k, n, i + 1)

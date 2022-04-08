@@ -4,8 +4,11 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
-    def averageOfLevels(self, root: TreeNode):
+    @staticmethod
+    def averageOfLevels(root: TreeNode):
         if not root:
             return []
         res = []
@@ -19,5 +22,5 @@ class Solution:
                     stack.append(node.left)
                 if node.right:
                     stack.append(node.right)
-            res.append(sum(level)/len(level))
+            res.append(sum(level) / len(level))
         return res

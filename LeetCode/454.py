@@ -1,5 +1,6 @@
 class Solution:
-    def fourSumCount(self, nums1, nums2, nums3, nums4) -> int:
+    @staticmethod
+    def fourSumCount(nums1, nums2, nums3, nums4) -> int:
         """
         :type nums1: List[int]
         :type nums2: List[int]
@@ -17,8 +18,9 @@ class Solution:
         res = 0
         for num3 in nums3:
             for num4 in nums4:
-                if -(num3+num4) in records:
+                if -(num3 + num4) in records:
                     res += records[-num3 - num4]
         return res
+
 
 print(Solution().fourSumCount([1, 2], [-2, -1], [-1, 2], [0, 2]))

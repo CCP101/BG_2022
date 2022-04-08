@@ -1,5 +1,6 @@
 class Solution:
-    def removeDuplicates(self, s: str) -> str:
+    @staticmethod
+    def removeDuplicates(s: str) -> str:
         res = list()
         for i in s:
             if res and res[-1] == i:

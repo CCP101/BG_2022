@@ -1,5 +1,6 @@
 class Solution:
-    def canPartition(self, nums) -> bool:
+    @staticmethod
+    def canPartition(nums) -> bool:
         taraget = sum(nums)
         if taraget % 2 == 1:
             return False

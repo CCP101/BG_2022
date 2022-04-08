@@ -1,5 +1,6 @@
 class Solution:
-    def topKFrequent(self, nums, k: int):
+    @staticmethod
+    def topKFrequent(nums, k: int):
         dictN = {}
         for i in set(nums):
             dictN[i] = 0 

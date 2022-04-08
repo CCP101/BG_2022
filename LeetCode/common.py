@@ -45,6 +45,17 @@ class Queue:
         return self.items[0]
 
 
+# input code
 Ncount = int(input())
 Nin = input()
 Nlist = [int(j) for j in Nin.split()]
+
+# enumerate
+a = [1, 2, 3, 4, 5]
+a = enumerate(a)
+for index, value in a:
+    print(index, value)
+
+# double list sort
+a = [[6, 1], [2, 6], [4, 5]]
+a = sorted(a, key=lambda x: x[0])

@@ -4,7 +4,7 @@ class Solution:
         s.sort()
         res = 0
         for i in range(len(s)):
-            if res <len(g) and s[i] >= g[res]:  #小饼干先喂饱小胃口
+            if res < len(g) and s[i] >= g[res]:  # 小饼干先喂饱小胃口
                 res += 1
         # start, count = len(s) - 1, 0
         # for index in range(len(g) - 1, -1, -1): # 先喂饱大胃口

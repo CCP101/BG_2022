@@ -7,7 +7,8 @@ class TreeNode:
 
 
 class Solution:
-    def minCameraCover(self, root: TreeNode) -> int:
+    @staticmethod
+    def minCameraCover(root: TreeNode) -> int:
         result = 0
 
         def travelsal(curr):

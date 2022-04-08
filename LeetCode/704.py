@@ -8,7 +8,8 @@
 
 # 二分查找写法
 class Solution:
-    def search(self, nums, target) -> int:
+    @staticmethod
+    def search(nums, target) -> int:
         left, right = 0, len(nums) - 1
         while left <= right:
             mid = (left + right) // 2

@@ -4,6 +4,8 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
     def constructMaximumBinaryTree(self, nums) -> TreeNode:
         if not nums:
@@ -12,7 +14,7 @@ class Solution:
         index = nums.index(maxNum)
         root = TreeNode(maxNum)
         left = nums[:index]
-        right = nums[index+1:]
+        right = nums[index + 1:]
         root.left = self.constructMaximumBinaryTree(left)
         root.right = self.constructMaximumBinaryTree(right)
         return root

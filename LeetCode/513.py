@@ -4,8 +4,11 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
-    def findBottomLeftValue(self, root) -> int:
+    @staticmethod
+    def findBottomLeftValue(root) -> int:
         if not root:
             return 0
         count = 0

@@ -1,5 +1,6 @@
 class Solution:
-    def minCostClimbingStairs(self, cost):
+    @staticmethod
+    def minCostClimbingStairs(cost):
         dp = [0] * (len(cost))
         dp[0] = cost[0]
         dp[1] = cost[1]

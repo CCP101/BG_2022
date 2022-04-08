@@ -4,8 +4,11 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
-    def sumOfLeftLeaves(self, root) -> int:
+    @staticmethod
+    def sumOfLeftLeaves(root) -> int:
         if not root:
             return 0
         count = 0
@@ -21,14 +24,14 @@ class Solution:
                     stack.append(node.left)
                 if node.right:
                     stack.append(node.right)
-            
+
         return count
 
         # left_left_leaves_sum = self.sumOfLeftLeaves(root.left)  # 左
         # right_left_leaves_sum = self.sumOfLeftLeaves(root.right) # 右
-        
+
         # cur_left_leaf_val = 0
         # if root.left and not root.left.left and not root.left.right: 
         #     cur_left_leaf_val = root.left.val 
-            
+
         # return cur_left_leaf_val + left_left_leaves_sum + right_left_leaves_sum # 中

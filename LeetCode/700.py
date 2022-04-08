@@ -4,6 +4,8 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
     def searchBST(self, root: TreeNode, val: int) -> TreeNode:
         if not root:
@@ -12,5 +14,5 @@ class Solution:
             return root
         if root.val < val:
             return self.searchBST(root.right, val)
-        if root.val > val: 
+        if root.val > val:
             return self.searchBST(root.left, val)

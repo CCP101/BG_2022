@@ -9,10 +9,11 @@
 #             nums[index] = nums[index] ** 2
 #         return nums
 
-#快慢指针
+# 快慢指针
 class Solution:
-    def sortedSquares(self, nums):
-        slow, fast ,index = 0, len(nums)-1, len(nums)-1 
+    @staticmethod
+    def sortedSquares(nums):
+        slow, fast, index = 0, len(nums) - 1, len(nums) - 1
         ans = [-1] * len(nums)
         while slow <= fast:
             lnum = nums[slow] ** 2
@@ -27,4 +28,5 @@ class Solution:
                 index -= 1
         return ans
 
-print(Solution().sortedSquares([-4,-1,0,3,10]))
+
+print(Solution().sortedSquares([-4, -1, 0, 3, 10]))

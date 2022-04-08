@@ -1,5 +1,6 @@
 class Solution:
-    def partitionLabels(self, s: str):
+    @staticmethod
+    def partitionLabels(s: str):
         hash = [0] * 26
         for i in range(len(s)):
             hash[ord(s[i]) - ord('a')] = i
@@ -12,6 +13,7 @@ class Solution:
                 result.append(right - left + 1)
                 left = i + 1
         return result
+
 
 soul = Solution()
 print(soul.partitionLabels("ababcbacadefegdehijhklij"))

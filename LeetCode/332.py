@@ -1,5 +1,6 @@
 class Solution:
-    def findItinerary(self, tickets):
+    @staticmethod
+    def findItinerary(tickets):
         tickets_dict = {}
         for item in tickets:
             if item[0] not in tickets_dict.keys():
@@ -15,7 +16,7 @@ class Solution:
                 return
             tickets_dict[start_point].sort()
             for _ in tickets_dict[start_point]:
-                #必须及时删除，避免出现死循环
+                # 必须及时删除，避免出现死循环
                 end_point = tickets_dict[start_point].pop(0)
                 path.append(end_point)
                 # 只要找到一个就可以返回了
@@ -27,5 +28,6 @@ class Solution:
         backtracking("JFK")
         return path
 
+
 soul = Solution()
-print(soul.findItinerary([["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]]))
+print(soul.findItinerary([["JFK", "KUL"], ["JFK", "NRT"], ["NRT", "JFK"]]))
