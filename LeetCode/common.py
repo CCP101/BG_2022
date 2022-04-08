@@ -41,3 +41,7 @@ class Queue:
 
     def front(self):
         return self.items[0]
+
+Ncount = int(input())
+Nin = input()
+Nlist = [int(j) for j in Nin.split()]
