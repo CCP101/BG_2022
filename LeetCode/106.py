@@ -4,9 +4,11 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
     def buildTree(self, inorder, postorder) -> TreeNode:
-        if not postorder: 
+        if not postorder:
             return None
 
         # 第二步: 后序遍历的最后一个就是当前的中间节点. 
@@ -29,4 +31,4 @@ class Solution:
         root.left = self.buildTree(inorder_left, postorder_left)
         root.right = self.buildTree(inorder_right, postorder_right)
 
-        return root 
+        return root

@@ -1,5 +1,6 @@
 class Solution:
-    def jump(self, nums) -> int:
+    @staticmethod
+    def jump(nums) -> int:
         if len(nums) == 1: 
             return 0
         ans = 0

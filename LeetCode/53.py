@@ -1,5 +1,6 @@
 class Solution:
-    def maxSubArray(self, nums) -> int:
+    @staticmethod
+    def maxSubArray(nums) -> int:
         result = -float('inf')
         count = 0
         for i in range(len(nums)):
@@ -10,5 +11,6 @@ class Solution:
                 count = 0
         return result
 
+
 soul = Solution()
-print(soul.maxSubArray([-2,1,-3,4,-1,2,1,-5,4,99])) 
+print(soul.maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4, 99]))

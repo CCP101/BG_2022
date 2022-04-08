@@ -4,8 +4,11 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
-    def levelOrder(self, root: TreeNode):
+    @staticmethod
+    def levelOrder(root: TreeNode):
         if not root:
             return []
         res = []

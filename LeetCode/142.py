@@ -5,7 +5,8 @@ class ListNode:
         self.next = None
 
 class Solution:
-    def detectCycle(self, head: ListNode) -> ListNode:
+    @staticmethod
+    def detectCycle(head: ListNode) -> ListNode:
         slow, fast = head, head
         while fast and fast.next:
             slow = slow.next

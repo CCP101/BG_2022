@@ -1,5 +1,6 @@
 class Solution:
-    def minSubArrayLen(self, target, nums) -> int:
+    @staticmethod
+    def minSubArrayLen(target, nums) -> int:
         # 常规写法
         # slow = 0
         # length = float("inf") #考虑极端情况
@@ -25,11 +26,12 @@ class Solution:
         index = 0
         for i in range(len(nums)):
             Sum += nums[i]
-            print(str(Sum)+"XXXX")
+            print(str(Sum) + "XXXX")
             while Sum >= target:
-                res = min(res, i-index+1)
+                res = min(res, i - index + 1)
                 Sum -= nums[index]
                 index += 1
-        return 0 if res==float("inf") else res
+        return 0 if res == float("inf") else res
 
-print(Solution().minSubArrayLen(7,[2,3,4,3,1,2]))
+
+print(Solution().minSubArrayLen(7, [2, 3, 4, 3, 1, 2]))

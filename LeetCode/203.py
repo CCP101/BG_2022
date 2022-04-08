@@ -6,10 +6,11 @@ class ListNode:
 
 
 class Solution:
-    def removeElements(self, head: ListNode, val: int) -> ListNode:
+    @staticmethod
+    def removeElements(head, val):
         dummy_head = ListNode(next=head)  # 添加一个虚拟节点
         cur = dummy_head
-        while cur.next != None:
+        while cur.next is not None:
             if cur.next.val == val:
                 cur.next = cur.next.next  # 删除cur.next节点
             else:

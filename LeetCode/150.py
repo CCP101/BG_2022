@@ -1,5 +1,6 @@
 class Solution:
-    def evalRPN(self, tokens) -> int:
+    @staticmethod
+    def evalRPN(tokens) -> int:
         stack = []
         for item in tokens:
             if item not in {"+", "-", "*", "/"}:

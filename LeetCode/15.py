@@ -1,8 +1,6 @@
-from turtle import left
-
-
 class Solution:
-    def threeSum(self, nums):
+    @staticmethod
+    def threeSum(nums):
         ans = []
         n = len(nums)
         nums.sort()
@@ -28,7 +26,6 @@ class Solution:
                     left += 1
                     right -= 1
         return ans
-
 
 
 print(Solution().threeSum([-1, 0, 0, 1, 2, -1, -4]))

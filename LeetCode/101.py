@@ -1,14 +1,14 @@
 # Definition for a binary tree node.
-from sympy import false
-
-
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
-    def isSymmetric(self, root) -> bool:
+    @staticmethod
+    def isSymmetric(root) -> bool:
         # if not root:
         #     return True
         # stack = [root]
@@ -43,18 +43,16 @@ class Solution:
         # return True 
         if not root:
             return True
-        st = [] #这里改成了栈
-        st.append(root.left)
-        st.append(root.right)
+        st = [root.left, root.right]  # 这里改成了栈
         while st:
-            leftNode = st.pop()
-            rightNode = st.pop()
-            if not leftNode and not rightNode:
+            left_node = st.pop()
+            right_node = st.pop()
+            if not left_node and not right_node:
                 continue
-            if not leftNode or not rightNode or leftNode.val != rightNode.val:
+            if not left_node or not right_node or left_node.val != right_node.val:
                 return False
-            st.append(leftNode.left)
-            st.append(rightNode.right)
-            st.append(leftNode.right)
-            st.append(rightNode.left)
+            st.append(left_node.left)
+            st.append(right_node.right)
+            st.append(left_node.right)
+            st.append(right_node.left)
         return True

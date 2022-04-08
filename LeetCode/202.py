@@ -1,10 +1,7 @@
-from numpy import record
-
-
 class Solution:
     def __init__(self, num):
         self.n = num
-    
+
     def calculate(self, num):
         sum = 0
         while num > 0:
@@ -22,6 +19,7 @@ class Solution:
                 return False
             else:
                 record.add(self.n)
+
 
 soul = Solution(19)
 print(soul.isHappy())

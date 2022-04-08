@@ -4,9 +4,11 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
     def buildTree(self, preorder, inorder) -> TreeNode:
-        if not preorder: 
+        if not preorder:
             return None
 
         # 第二步: 前序遍历的第一个就是当前的中间节点. 

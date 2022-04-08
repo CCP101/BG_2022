@@ -5,8 +5,10 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 class Solution:
-    def minDepth(self, root: TreeNode) -> int:
+    @staticmethod
+    def minDepth(root: TreeNode) -> int:
         if not root:
             return 0
         res = 10000

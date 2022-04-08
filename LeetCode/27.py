@@ -1,5 +1,9 @@
+from typing import Tuple, List, Any
+
+
 class Solution:
-    def removeElement(self, nums, val) -> int:
+    @staticmethod
+    def removeElement(nums, val) -> Tuple[int, List[Any]]:
         # slow, fast = 0, 0
         # while fast < len(nums):
         #     if nums[fast] != val:
@@ -14,9 +18,8 @@ class Solution:
                 count += 1
         while val in nlist:
             nlist.remove(val)
-        print(type([0,1,2,2,3,0,4,2]))
-        print(type(nlist))
         return count, nlist
 
-index, nums = (Solution().removeElement([0,1,2,2,3,0,4,2], 2))
-print("index={0},nums={1}".format(index,nums))
+
+index, num = (Solution().removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2))
+print("index={0},nums={1}".format(index, num))

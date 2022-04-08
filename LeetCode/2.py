@@ -3,8 +3,11 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
+
 class Solution:
-    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+    @staticmethod
+    def addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:
         carry = 0
         root = n = ListNode(0)
         while l1 or l2 or carry:
@@ -15,7 +18,7 @@ class Solution:
             if l2:
                 v2 = l2.val
                 l2 = l2.next
-            carry, val = divmod(v1+v2+carry, 10)
+            carry, val = divmod(v1 + v2 + carry, 10)
             n.next = ListNode(val)
             n = n.next
         return root.next

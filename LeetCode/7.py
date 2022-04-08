@@ -1,4 +1,5 @@
 class Solution:
+    @staticmethod
     def reverse(x) -> int:
         if x < 0:
             x = -x
@@ -11,4 +12,5 @@ class Solution:
             x //= 10
         return res * sign if res < 2 ** 31 else 0
 
-print(Solution.reverse(123))
+
+print(Solution.reverse(10))

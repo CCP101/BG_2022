@@ -3,8 +3,11 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
+
 class Solution:
-    def swapPairs(self, head: ListNode) -> ListNode:
+    @staticmethod
+    def swapPairs(head: ListNode) -> ListNode:
         res = ListNode(next=head)
         pre = res
 
@@ -17,5 +20,5 @@ class Solution:
             pre.next = post
 
             pre = pre.next.next
-            
+
         return res.next

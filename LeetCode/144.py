@@ -4,8 +4,11 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
-    def preorderTraversal(self, root):
+    @staticmethod
+    def preorderTraversal(root):
         # if not root:
         #     return []
         # res = []
@@ -19,17 +22,17 @@ class Solution:
         #         stack.append(node.left)
         # return res
         result = []
-        st= []
+        st = []
         if root:
             st.append(root)
         while st:
             node = st.pop()
-            if node != None:
-                if node.right: #右
+            if node is not None:
+                if node.right:  # 右
                     st.append(node.right)
-                if node.left: #左
+                if node.left:  # 左
                     st.append(node.left)
-                st.append(node) #中
+                st.append(node)  # 中
                 st.append(None)
             else:
                 node = st.pop()

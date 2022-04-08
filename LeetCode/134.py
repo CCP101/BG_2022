@@ -1,5 +1,6 @@
 class Solution:
-    def canCompleteCircuit(self, gas, cost) -> int:
+    @staticmethod
+    def canCompleteCircuit(gas, cost) -> int:
         start = 0
         curSum = 0
         totalSum = 0

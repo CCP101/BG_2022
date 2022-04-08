@@ -4,13 +4,15 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+
 class Solution:
     def isBalanced(self, root: TreeNode) -> bool:
         if self.get_height(root) != -1:
             return True
         else:
             return False
-    
+
     def get_height(self, root: TreeNode) -> int:
         if not root:
             return 0

@@ -3,7 +3,7 @@ class Solution:
         # quadruplets = list()
         # if not nums or len(nums) < 4:
         #     return quadruplets
-        
+
         # nums.sort()
         # length = len(nums)
         # for i in range(length - 3):
@@ -35,21 +35,21 @@ class Solution:
         #                 left += 1
         #             else:
         #                 right -= 1
-        
+
         # return quadruplets
 
-
-        d={}
+        d = {}
         for i in range(len(nums)):
-            for j in range(i+1,len(nums)):
-                d.setdefault(nums[i]+nums[j],[]).append((i,j))
-        result=set()
+            for j in range(i + 1, len(nums)):
+                d.setdefault(nums[i] + nums[j], []).append((i, j))
+        result = set()
         for i in range(len(nums)):
-            for j in range(i+1,len(nums)):
-                for a,b in d.get(target-nums[i]-nums[j],[]):
-                    temp={i,j,a,b}
-                    if len(temp)==4:
+            for j in range(i + 1, len(nums)):
+                for a, b in d.get(target - nums[i] - nums[j], []):
+                    temp = {i, j, a, b}
+                    if len(temp) == 4:
                         result.add(tuple(sorted(nums[t] for t in temp)))
         return result
+
 
 print(Solution().fourSum([-1, 0, 0, 1, 2, -1, -4], 1))

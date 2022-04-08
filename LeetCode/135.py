@@ -1,5 +1,6 @@
 class Solution:
-    def candy(self, ratings) -> int:
+    @staticmethod
+    def candy(ratings) -> int:
         candyVec = [1] * len(ratings)
         for i in range(1, len(ratings)):
             if ratings[i] > ratings[i-1]:

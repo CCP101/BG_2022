@@ -5,8 +5,10 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 class Solution:
-    def maxDepth(self, root):
+    @staticmethod
+    def maxDepth(root):
         if not root:
             return 0
         res = []
